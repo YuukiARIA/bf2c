@@ -100,8 +100,7 @@ void make_out_filename(char *name, const char *in_filename) {
 int main(int argc, char *argv[]) {
   char out_filename[256];
 
-  if (argc >= 2)
-  {
+  if (argc >= 2) {
     make_out_filename(out_filename, argv[1]);
     freopen(argv[1], "r", stdin);
     freopen(out_filename, "w", stdout);
