@@ -94,7 +94,7 @@ int main(int argc, char *argv[]) {
   puts("#define MEM_SIZE   ( 32768 )");
   puts("#ifdef NOCHECK");
   puts("#define CHK(p)     ( p )");
-  puts("#else\n");
+  puts("#else");
   puts("#define CHK(p)     ( chk(p) )");
   puts("static void chk(byte *p){");
   puts("  if(p<ptr_start||ptr_end<=p){");
@@ -125,5 +125,7 @@ int main(int argc, char *argv[]) {
   puts("}");
 
   if (g_indent_level != 1) fprintf(stderr, "Warning: Incorrect Nesting.\n");
+
+  fprintf(stderr, "-- '%s' created.\n", out_filename);
   return 0;
 }
