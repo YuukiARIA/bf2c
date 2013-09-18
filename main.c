@@ -147,9 +147,10 @@ int main(int argc, char *argv[]) {
     fprintf(stderr, "Warning: Incorrect Nesting.\n");
   }
   puts("/* -- end -- */");
-  puts("putchar('\\n');");
-  puts("free(ptr_start);");
-  puts("return 0;");
-  puts("}");
+  puts("  putchar('\\n');");
+  puts("  free(ptr_start);");
+  puts("  return 0;");
+  puts("}\n");
   return 0;
 }
+
