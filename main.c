@@ -72,7 +72,6 @@ void emit_code(void) {
       c = getchar();
     }
     else if (id == 7) { /* ',' */
-      if (commented) printf(" */\n"), commented = 0;
       print_code("*ptr=getchar();");
       c = getchar();
     }
